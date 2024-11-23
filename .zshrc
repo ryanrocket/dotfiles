@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Homebrew Initialization
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -19,11 +21,7 @@ LS_COLORS="fi=01;37:di=01;34:ex=01;32:ln=37\
 export LS_COLORS
 
 # Shell Prompt Configuration
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ] && [ "$TERM_PROGRAM" != "Terminus-Sublime" ] && [ "$TERM_PROGRAM" != "Konsole" ]; then
-  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/capr4n.omp.json)"
-else
-  export PS1="%n@%1~ > "
-fi
+export PS1="%n@%1~ > "
 
 # Aliases
 alias ls="ls -G"
